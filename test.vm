@@ -1,0 +1,36 @@
+:main
+    movi r1 1
+    movi r2 10
+    jump :count_from_to
+    exit
+
+:count_down
+    push r1
+    movi r1 10
+    :count_down_loop
+        eq rt r1 rz
+        goto_if rt :count_down_exit
+            printi r1
+            movi rt 1
+            subi r1 r1 rt
+        goto :count_down_loop
+    :count_down_exit
+    pop r1
+    mov rip ra
+
+:count_from_to
+    push r1
+    push r2
+    movi rt 1
+    addi r2 r2 rt
+    :count_from_to_loop
+        eq rt r1 r2
+        goto_if rt :count_from_to_exit
+            printi r1
+            movi rt 1
+            addi r1 r1 rt
+        goto :count_from_to_loop
+    :count_from_to_exit
+    pop r2
+    pop r1
+    mov rip ra
