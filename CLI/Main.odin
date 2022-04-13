@@ -3,7 +3,7 @@ package main
 import "core:os"
 import "core:fmt"
 
-import "vm"
+import "../../vm"
 
 main :: proc() {
 	if len(os.args) != 2 {

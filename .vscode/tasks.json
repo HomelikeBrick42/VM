@@ -4,7 +4,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "odin build Main.odin -file -debug -out:VM.exe",
+            "command": "odin build CLI/Main.odin -file -debug -out:VM.exe",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
